@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   CButton,
@@ -29,6 +29,10 @@ const Login = () => {
   const [password, setPassword] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [toast, addToast] = useState(0)
+
+  useEffect(() => {
+    if (authedUser !== null) navigate('/')
+  }, [])
 
   const onSubmitHandler = async (event) => {
     event.preventDefault()

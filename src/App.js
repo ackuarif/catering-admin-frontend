@@ -50,7 +50,7 @@ class App extends Component {
       }
     })
 
-    if (getSelfUserReq.success)
+    if (getSelfUserReq.success) {
       this.setState((state) => {
         return {
           userContext: {
@@ -59,6 +59,7 @@ class App extends Component {
           },
         }
       })
+    }
   }
 
   render() {
@@ -69,11 +70,8 @@ class App extends Component {
             <Routes>
               <Route exact path="/404" name="Page 404" element={<Page404 />} />
               <Route exact path="/500" name="Page 500" element={<Page500 />} />
-              {(() => {
-                if (this.state.userContext.authedUser === null)
-                  return <Route exact path="/login" name="Login Page" element={<Login />} />
-                else return <Route path="/*" name="Home" element={<DefaultLayout />} />
-              })()}
+              <Route exact path="/login" name="Login Page" element={<Login />} />
+              <Route path="*" name="Home" element={<DefaultLayout />} />
             </Routes>
           </UserProvider>
         </Suspense>

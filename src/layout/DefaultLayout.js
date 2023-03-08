@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import UserContext from 'src/contexts/UserContext'
 import { AppContent, AppSidebar, AppFooter, AppHeader } from '../components/index'
 
 const DefaultLayout = () => {
+  const navigate = useNavigate()
+  const { authedUser, setAuthedUser } = useContext(UserContext)
+
+  useEffect(() => {
+    if (authedUser === null) navigate('/login')
+  }, [])
+
   return (
     <div>
       <AppSidebar />
