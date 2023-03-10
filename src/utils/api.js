@@ -159,6 +159,16 @@ async function getTotalByPemesananId(id) {
   return await response.json()
 }
 
+async function getJmlPemesananCurrentMonth() {
+  const response = await fetchWithToken(`${BASE_URL}/pemesanan/getJmlPemesananCurrentMonth`)
+  return await response.json()
+}
+
+async function getJmlPemesananPrevMonth() {
+  const response = await fetchWithToken(`${BASE_URL}/pemesanan/getJmlPemesananPrevMonth`)
+  return await response.json()
+}
+
 export {
   getAccessToken,
   putAccessToken,
@@ -172,6 +182,8 @@ export {
   getKeranjangAll,
   getPemesananAll,
   getPemesananById,
+  getJmlPemesananCurrentMonth,
+  getJmlPemesananPrevMonth,
   getKeranjangByPemesananId,
   getTotalKeranjangByPelanggan,
   getTotalByPemesananId,
