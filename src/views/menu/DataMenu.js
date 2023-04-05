@@ -98,10 +98,18 @@ const DataMenu = () => {
                     <img src={gambar} width="50" />
                   </CTableDataCell>
                   <CTableDataCell>
-                    <CButton color="primary" size="sm">
+                    <CButton
+                      onClick={() => {
+                        navigate(`/menu/edit/${id}`)
+                      }}
+                      className="mb-1"
+                      color="primary"
+                      size="sm"
+                    >
                       Edit
                     </CButton>
                     <CButton
+                      className="mb-1"
                       color="danger"
                       onClick={() => {
                         setVisible(!visible)

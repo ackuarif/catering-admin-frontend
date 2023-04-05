@@ -52,6 +52,7 @@ const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
 
 const TambahMenu = React.lazy(() => import('./views/menu/TambahMenu'))
 const DataMenu = React.lazy(() => import('./views/menu/DataMenu'))
+const EditMenu = React.lazy(() => import('./views/menu/EditMenu'))
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
@@ -100,6 +101,7 @@ const routes = [
   { path: '/widgets', name: 'Widgets', element: Widgets },
   { path: '/menu/tambah', name: 'Tambah Menu', element: TambahMenu },
   { path: '/menu/data', name: 'Data Menu', element: DataMenu },
+  { path: '/menu/edit/:id', name: 'Edit Menu', element: EditMenu },
 ]
 
 export default routes

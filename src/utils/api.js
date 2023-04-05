@@ -198,6 +198,24 @@ async function deleteMenuById(id) {
   return await response.json()
 }
 
+async function updateMenu(data) {
+  const formData = new FormData()
+  const { id, nama, deskripsi, harga, diskon, tersedia, gambar } = data
+  formData.append('nama', nama)
+  formData.append('detail', deskripsi)
+  formData.append('harga', harga)
+  formData.append('diskon', diskon)
+  formData.append('tersedia', tersedia)
+  formData.append('gambar', gambar)
+
+  const response = await fetchWithToken(`${BASE_URL}/menu/${id}`, {
+    method: 'PUT',
+    body: formData,
+  })
+
+  return await response.json()
+}
+
 export {
   getAccessToken,
   putAccessToken,
@@ -222,4 +240,5 @@ export {
   register,
   addMenu,
   deleteMenuById,
+  updateMenu,
 }
