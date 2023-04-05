@@ -216,6 +216,54 @@ async function updateMenu(data) {
   return await response.json()
 }
 
+async function addAdmin(data) {
+  const response = await fetchWithToken(`${BASE_URL}/admin`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+
+  return await response.json()
+}
+
+async function getAdminAll() {
+  const response = await fetchWithToken(`${BASE_URL}/admin`)
+  return await response.json()
+}
+
+async function inactiveAdminById(id) {
+  const response = await fetchWithToken(`${BASE_URL}/admin/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+
+  return await response.json()
+}
+
+async function updateAdmin(data) {
+  const { id } = data
+
+  const response = await fetchWithToken(`${BASE_URL}/admin/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+
+  return await response.json()
+}
+
+async function getAdminById(id) {
+  const response = await fetchWithToken(`${BASE_URL}/admin/getSelfUser`)
+  const data = await response.json()
+  return data
+}
+
 export {
   getAccessToken,
   putAccessToken,
@@ -241,4 +289,9 @@ export {
   addMenu,
   deleteMenuById,
   updateMenu,
+  addAdmin,
+  getAdminAll,
+  inactiveAdminById,
+  updateAdmin,
+  getAdminById,
 }
