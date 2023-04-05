@@ -187,6 +187,17 @@ async function getMenuAll() {
   return await response.json()
 }
 
+async function deleteMenuById(id) {
+  const response = await fetchWithToken(`${BASE_URL}/menu/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+
+  return await response.json()
+}
+
 export {
   getAccessToken,
   putAccessToken,
@@ -210,4 +221,5 @@ export {
   login,
   register,
   addMenu,
+  deleteMenuById,
 }

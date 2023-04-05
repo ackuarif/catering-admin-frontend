@@ -55,9 +55,6 @@ const TambahMenu = () => {
       addToast(<Toast color="danger" body={addMenuReq.message} />)
       return
     }
-
-    navigate('/menu/tambah')
-
     addToast(<Toast color="success" body={addMenuReq.message} />)
   }
 
