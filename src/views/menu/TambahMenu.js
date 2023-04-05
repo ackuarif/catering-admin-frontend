@@ -12,12 +12,13 @@ import {
   CInputGroupText,
   CInputGroup,
   CToaster,
+  CSpinner,
 } from '@coreui/react'
 import { useNavigate } from 'react-router-dom'
 import { addMenu } from 'src/utils/api'
 import Toast from 'src/components/Toast'
 
-const TambahMemnu = () => {
+const TambahMenu = () => {
   const navigate = useNavigate()
 
   const [isLoading, setIsLoading] = useState(false)
@@ -55,8 +56,13 @@ const TambahMemnu = () => {
       return
     }
 
-    navigate('/')
+    navigate('/menu/tambah')
+
+    addToast(<Toast color="success" body={addMenuReq.message} />)
   }
+
+  if (isLoading) return <CSpinner color="primary" />
+
   return (
     <CRow>
       <CToaster push={toast} placement="top-end" />
@@ -149,4 +155,4 @@ const TambahMemnu = () => {
   )
 }
 
-export default TambahMemnu
+export default TambahMenu

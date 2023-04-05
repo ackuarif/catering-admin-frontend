@@ -44,12 +44,6 @@ async function register(data) {
   return await response.json()
 }
 
-async function getMenuAll() {
-  const response = await fetch(`${BASE_URL}/menu`)
-  const data = await response.json()
-  return data
-}
-
 async function getMenuById(id) {
   const response = await fetch(`${BASE_URL}/menu/getMenuById/${id}`)
   const data = await response.json()
@@ -185,6 +179,11 @@ async function addMenu(data) {
     body: formData,
   })
 
+  return await response.json()
+}
+
+async function getMenuAll() {
+  const response = await fetchWithToken(`${BASE_URL}/menu`)
   return await response.json()
 }
 

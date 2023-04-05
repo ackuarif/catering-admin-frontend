@@ -203,7 +203,7 @@ const _nav = [
   {
     component: CNavItem,
     name: 'Data Menu',
-    to: '/forms/layout',
+    to: '/menu/data',
     icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
   },
   // {
