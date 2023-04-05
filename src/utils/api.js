@@ -1,5 +1,6 @@
 const BASE_URL = 'http://localhost:8000/api'
 // const BASE_URL = 'http://192.168.1.4:8000/api';
+// const BASE_URL = 'https://api.tomboluwe.my.id/api'
 
 function getAccessToken() {
   return localStorage.getItem('accessToken')
@@ -169,6 +170,24 @@ async function getJmlPemesananPrevMonth() {
   return await response.json()
 }
 
+async function addMenu(data) {
+  const formData = new FormData()
+  const { nama, deskripsi, harga, diskon, tersedia, gambar } = data
+  formData.append('nama', nama)
+  formData.append('detail', deskripsi)
+  formData.append('harga', harga)
+  formData.append('diskon', diskon)
+  formData.append('tersedia', tersedia)
+  formData.append('gambar', gambar)
+
+  const response = await fetchWithToken(`${BASE_URL}/menu`, {
+    method: 'POST',
+    body: formData,
+  })
+
+  return await response.json()
+}
+
 export {
   getAccessToken,
   putAccessToken,
@@ -191,4 +210,5 @@ export {
   getChatByPemesananId,
   login,
   register,
+  addMenu,
 }

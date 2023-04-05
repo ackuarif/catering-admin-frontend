@@ -197,7 +197,7 @@ const _nav = [
   {
     component: CNavItem,
     name: 'Tambah Menu',
-    to: '/forms/form-control',
+    to: '/menu/tambah',
     icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
   },
   {
