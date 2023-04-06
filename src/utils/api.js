@@ -259,7 +259,7 @@ async function updateAdmin(data) {
 }
 
 async function getAdminById(id) {
-  const response = await fetchWithToken(`${BASE_URL}/admin/getSelfUser`)
+  const response = await fetchWithToken(`${BASE_URL}/admin/getAdminById/${id}`)
   const data = await response.json()
   return data
 }
