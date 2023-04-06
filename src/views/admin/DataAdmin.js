@@ -70,7 +70,7 @@ const DataMenu = () => {
     const [adminId, setAdminId] = useState('')
 
     return (
-      <>
+      <div className="table-responsive">
         <CTable striped hover>
           <CTableHead>
             <CTableRow>
@@ -130,7 +130,7 @@ const DataMenu = () => {
             </CButton>
           </CModalFooter>
         </CModal>
-      </>
+      </div>
     )
   }
 
