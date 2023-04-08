@@ -82,17 +82,6 @@ async function addPembayaran(data) {
   return await response.json()
 }
 
-async function deleteKeranjang(id) {
-  const response = await fetchWithToken(`${BASE_URL}/keranjang/${id}`, {
-    method: 'DELETE',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
-
-  return await response.json()
-}
-
 async function getKeranjangAll() {
   const response = await fetchWithToken(`${BASE_URL}/keranjang`)
   return await response.json()
@@ -247,7 +236,6 @@ export {
   getMenuById,
   getSelfUser,
   addPembayaran,
-  deleteKeranjang,
   getKeranjangAll,
   getPemesananAll,
   getPemesananById,
