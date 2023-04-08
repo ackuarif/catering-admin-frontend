@@ -246,8 +246,6 @@ export {
   getMenuAll,
   getMenuById,
   getSelfUser,
-  addKeranjang,
-  addPemesanan,
   addPembayaran,
   deleteKeranjang,
   getKeranjangAll,
