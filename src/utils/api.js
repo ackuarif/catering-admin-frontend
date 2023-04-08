@@ -55,18 +55,6 @@ async function getSelfUser() {
   return await response.json()
 }
 
-async function addPemesanan(data) {
-  const response = await fetchWithToken(`${BASE_URL}/pemesanan`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  })
-
-  return await response.json()
-}
-
 async function addChatPelanggan(data) {
   const response = await fetchWithToken(`${BASE_URL}/chat/addChatPelanggan`, {
     method: 'POST',
