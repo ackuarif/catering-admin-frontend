@@ -56,6 +56,7 @@ const EditMenu = () => {
     setHarga(getMenuByIdReq.data.harga)
     setDiskon(getMenuByIdReq.data.diskon)
     setTersedia(getMenuByIdReq.data.tersedia)
+    if (getMenuByIdReq.data.tersedia == null) setTersedia('1')
   }
 
   const handleSubmit = async (event) => {
