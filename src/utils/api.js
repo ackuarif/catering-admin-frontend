@@ -1,6 +1,6 @@
-// const BASE_URL = 'http://localhost:8000/api'
+const BASE_URL = 'http://localhost:8000/api'
 // const BASE_URL = 'http://192.168.1.4:8000/api';
-const BASE_URL = 'https://api.tomboluwe.my.id/api'
+// const BASE_URL = 'https://api.tomboluwe.my.id/api'
 
 function getAccessToken() {
   return localStorage.getItem('accessToken')
@@ -229,6 +229,38 @@ async function getAdminById(id) {
   return data
 }
 
+async function getPemesananVerif() {
+  const response = await fetchWithToken(`${BASE_URL}/pemesanan/getPemesananVerif`)
+  return await response.json()
+}
+
+async function verifPemesanan(id) {
+  const response = await fetchWithToken(`${BASE_URL}/pemesanan/verifPemesanan/${id}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+
+  return await response.json()
+}
+
+async function selesaiPemesanan(id) {
+  const response = await fetchWithToken(`${BASE_URL}/pemesanan/selesaiPemesanan/${id}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+
+  return await response.json()
+}
+
+async function getPemesananHeaderById(id) {
+  const response = await fetchWithToken(`${BASE_URL}/pemesanan/getPemesananHeaderById/${id}`)
+  return await response.json()
+}
+
 export {
   getAccessToken,
   putAccessToken,
@@ -256,4 +288,8 @@ export {
   inactiveAdminById,
   updateAdmin,
   getAdminById,
+  getPemesananVerif,
+  verifPemesanan,
+  selesaiPemesanan,
+  getPemesananHeaderById,
 }

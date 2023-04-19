@@ -35,7 +35,7 @@ const DataMenu = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [toast, addToast] = useState(0)
 
-  const [menus, setMenus] = useState([])
+  const [menus, setMenus] = useState({})
 
   useEffect(() => {
     componentDidMount()

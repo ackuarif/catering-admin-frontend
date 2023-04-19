@@ -4,13 +4,7 @@ import {
   CCard,
   CCardBody,
   CCardHeader,
-  CForm,
-  CFormInput,
-  CFormSelect,
   CRow,
-  CFormTextarea,
-  CInputGroupText,
-  CInputGroup,
   CToaster,
   CSpinner,
   CTable,
@@ -26,7 +20,7 @@ import {
   CModalFooter,
 } from '@coreui/react'
 import { useNavigate } from 'react-router-dom'
-import { getAdminAll, getMenuAll, inactiveAdminById } from 'src/utils/api'
+import { getAdminAll, inactiveAdminById } from 'src/utils/api'
 import Toast from 'src/components/Toast'
 
 const DataMenu = () => {
@@ -35,7 +29,7 @@ const DataMenu = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [toast, addToast] = useState(0)
 
-  const [admins, setAdmins] = useState([])
+  const [admins, setAdmins] = useState({})
 
   useEffect(() => {
     componentDidMount()

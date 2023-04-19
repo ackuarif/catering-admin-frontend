@@ -10,6 +10,9 @@ const TambahAdmin = React.lazy(() => import('./views/admin/TambahAdmin'))
 const DataAdmin = React.lazy(() => import('./views/admin/DataAdmin'))
 const EditAdmin = React.lazy(() => import('./views/admin/EditAdmin'))
 
+const DataVerifikasi = React.lazy(() => import('./views/pemesanan/DataVerifikasi'))
+const DetailPemesanan = React.lazy(() => import('./views/pemesanan/DetailPemesanan'))
+
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
@@ -19,6 +22,8 @@ const routes = [
   { path: '/admin/tambah', name: 'Tambah Admin', element: TambahAdmin },
   { path: '/admin/data', name: 'Data Admin', element: DataAdmin },
   { path: '/admin/edit/:id', name: 'Edit Admin', element: EditAdmin },
+  { path: '/pemesanan/verifikasi', name: 'Data Verifikasi', element: DataVerifikasi },
+  { path: '/pemesanan/detail/:id', name: 'Detail Pemesanan', element: DetailPemesanan },
 ]
 
 export default routes
