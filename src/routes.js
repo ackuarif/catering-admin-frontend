@@ -10,7 +10,9 @@ const TambahAdmin = React.lazy(() => import('./views/admin/TambahAdmin'))
 const DataAdmin = React.lazy(() => import('./views/admin/DataAdmin'))
 const EditAdmin = React.lazy(() => import('./views/admin/EditAdmin'))
 
-const DataVerifikasi = React.lazy(() => import('./views/pemesanan/DataVerifikasi'))
+const DataVerifikasiPemesanan = React.lazy(() => import('./views/pemesanan/DataVerifikasi'))
+const DataProsesPemesanan = React.lazy(() => import('./views/pemesanan/DataProses'))
+const DataSelesaiPemesanan = React.lazy(() => import('./views/pemesanan/DataSelesai'))
 const DetailPemesanan = React.lazy(() => import('./views/pemesanan/DetailPemesanan'))
 
 const routes = [
@@ -22,7 +24,9 @@ const routes = [
   { path: '/admin/tambah', name: 'Tambah Admin', element: TambahAdmin },
   { path: '/admin/data', name: 'Data Admin', element: DataAdmin },
   { path: '/admin/edit/:id', name: 'Edit Admin', element: EditAdmin },
-  { path: '/pemesanan/verifikasi', name: 'Data Verifikasi', element: DataVerifikasi },
+  { path: '/pemesanan/verifikasi', name: 'Data Verifikasi', element: DataVerifikasiPemesanan },
+  { path: '/pemesanan/proses', name: 'Data Proses', element: DataProsesPemesanan },
+  { path: '/pemesanan/selesai', name: 'Data Selesai', element: DataSelesaiPemesanan },
   { path: '/pemesanan/detail/:id', name: 'Detail Pemesanan', element: DetailPemesanan },
 ]
 

@@ -234,6 +234,16 @@ async function getPemesananVerif() {
   return await response.json()
 }
 
+async function getPemesananProses() {
+  const response = await fetchWithToken(`${BASE_URL}/pemesanan/getPemesananProses`)
+  return await response.json()
+}
+
+async function getPemesananSelesai() {
+  const response = await fetchWithToken(`${BASE_URL}/pemesanan/getPemesananSelesai`)
+  return await response.json()
+}
+
 async function verifPemesanan(id) {
   const response = await fetchWithToken(`${BASE_URL}/pemesanan/verifPemesanan/${id}`, {
     method: 'POST',
@@ -292,4 +302,6 @@ export {
   verifPemesanan,
   selesaiPemesanan,
   getPemesananHeaderById,
+  getPemesananProses,
+  getPemesananSelesai,
 }
