@@ -76,7 +76,7 @@ const DataSelesai = () => {
                         navigate(`/pemesanan/detail/${id}`)
                       }}
                       className="mb-1 ms-1"
-                      color="primary"
+                      color="info"
                       size="sm"
                     >
                       Lihat

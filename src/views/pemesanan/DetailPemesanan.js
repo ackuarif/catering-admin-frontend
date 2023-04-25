@@ -162,7 +162,7 @@ const DataVerifikasi = () => {
           onClick={() => {
             setPembayaranModal(true)
           }}
-          color="secondary"
+          color="info"
           className="mb-1 ms-1"
           size="sm"
         >

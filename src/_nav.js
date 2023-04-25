@@ -32,38 +32,6 @@ const _nav = [
   },
   {
     component: CNavTitle,
-    name: 'Menu Catering',
-  },
-  {
-    component: CNavItem,
-    name: 'Tambah Menu',
-    to: '/menu/tambah',
-    icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavItem,
-    name: 'Data Menu',
-    to: '/menu/data',
-    icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavTitle,
-    name: 'Admin',
-  },
-  {
-    component: CNavItem,
-    name: 'Tambah Admin',
-    to: '/admin/tambah',
-    icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavItem,
-    name: 'Data Admin',
-    to: '/admin/data',
-    icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavTitle,
     name: 'Pemesanan',
   },
   {
@@ -99,6 +67,38 @@ const _nav = [
     name: 'Laporan',
     to: '/tools/laporan',
     icon: <CIcon icon={cilStorage} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavTitle,
+    name: 'Menu Catering',
+  },
+  {
+    component: CNavItem,
+    name: 'Tambah Menu',
+    to: '/menu/tambah',
+    icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Data Menu',
+    to: '/menu/data',
+    icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavTitle,
+    name: 'Admin',
+  },
+  {
+    component: CNavItem,
+    name: 'Tambah Admin',
+    to: '/admin/tambah',
+    icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Data Admin',
+    to: '/admin/data',
+    icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
   },
 ]
 
