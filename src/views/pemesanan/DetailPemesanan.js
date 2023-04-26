@@ -20,14 +20,7 @@ import {
   CModalFooter,
 } from '@coreui/react'
 import { useNavigate, useParams } from 'react-router-dom'
-import {
-  getAdminAll,
-  getKeranjangByPemesananId,
-  getPemesananHeaderById,
-  getPemesananVerif,
-  inactiveAdminById,
-  selesaiPemesanan,
-} from 'src/utils/api'
+import { getKeranjangByPemesananId, getPemesananHeaderById, selesaiPemesanan } from 'src/utils/api'
 import Toast from 'src/components/Toast'
 import { verifPemesanan } from '../../utils/api'
 

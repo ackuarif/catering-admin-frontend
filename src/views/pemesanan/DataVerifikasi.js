@@ -5,7 +5,6 @@ import {
   CCardBody,
   CCardHeader,
   CRow,
-  CToaster,
   CSpinner,
   CTable,
   CTableHead,
@@ -13,16 +12,9 @@ import {
   CTableHeaderCell,
   CTableBody,
   CTableDataCell,
-  CModal,
-  CModalHeader,
-  CModalTitle,
-  CModalBody,
-  CModalFooter,
 } from '@coreui/react'
 import { useNavigate } from 'react-router-dom'
-import { getAdminAll, getPemesananVerif, inactiveAdminById } from 'src/utils/api'
-import Toast from 'src/components/Toast'
-import { verifPemesanan } from '../../utils/api'
+import { getPemesananVerif } from 'src/utils/api'
 
 const DataVerifikasi = () => {
   const navigate = useNavigate()

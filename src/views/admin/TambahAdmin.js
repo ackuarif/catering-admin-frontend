@@ -6,16 +6,13 @@ import {
   CCardHeader,
   CForm,
   CFormInput,
-  CFormSelect,
   CRow,
-  CFormTextarea,
-  CInputGroupText,
   CInputGroup,
   CToaster,
   CSpinner,
 } from '@coreui/react'
 import { useNavigate } from 'react-router-dom'
-import { addAdmin, addMenu } from 'src/utils/api'
+import { addAdmin } from 'src/utils/api'
 import Toast from 'src/components/Toast'
 
 const TambahAdmin = () => {

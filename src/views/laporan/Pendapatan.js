@@ -6,12 +6,8 @@ import {
   CCardHeader,
   CForm,
   CFormInput,
-  CFormSelect,
   CRow,
-  CFormTextarea,
-  CInputGroupText,
   CInputGroup,
-  CToaster,
   CSpinner,
   CTable,
   CTableHead,
@@ -21,8 +17,7 @@ import {
   CTableDataCell,
 } from '@coreui/react'
 import { useNavigate } from 'react-router-dom'
-import { addAdmin, addMenu, laporanPendapatanByDate } from 'src/utils/api'
-import Toast from 'src/components/Toast'
+import { laporanPendapatanByDate } from 'src/utils/api'
 
 const Pendapatan = () => {
   const navigate = useNavigate()

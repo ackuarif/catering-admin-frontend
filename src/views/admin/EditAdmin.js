@@ -6,10 +6,7 @@ import {
   CCardHeader,
   CForm,
   CFormInput,
-  CFormSelect,
   CRow,
-  CFormTextarea,
-  CInputGroupText,
   CInputGroup,
   CToaster,
   CSpinner,
@@ -27,8 +24,6 @@ const EditAdmin = () => {
   const { id } = useParams()
   const [nama, setNama] = useState('')
   const [user_id, setUserId] = useState('')
-  const [password, setPassword] = useState('')
-  const [password_confirm, setPasswordConfirm] = useState('')
 
   useEffect(() => {
     componentDidMount()

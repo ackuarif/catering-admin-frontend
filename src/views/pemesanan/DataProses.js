@@ -5,7 +5,6 @@ import {
   CCardBody,
   CCardHeader,
   CRow,
-  CToaster,
   CSpinner,
   CTable,
   CTableHead,
@@ -13,16 +12,9 @@ import {
   CTableHeaderCell,
   CTableBody,
   CTableDataCell,
-  CModal,
-  CModalHeader,
-  CModalTitle,
-  CModalBody,
-  CModalFooter,
 } from '@coreui/react'
 import { useNavigate } from 'react-router-dom'
-import { getAdminAll, getPemesananProses, inactiveAdminById } from 'src/utils/api'
-import Toast from 'src/components/Toast'
-import { prosesPemesanan } from '../../utils/api'
+import { getPemesananProses } from 'src/utils/api'
 
 const DataProses = () => {
   const navigate = useNavigate()

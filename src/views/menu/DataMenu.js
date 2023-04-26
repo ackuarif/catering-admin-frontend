@@ -4,13 +4,7 @@ import {
   CCard,
   CCardBody,
   CCardHeader,
-  CForm,
-  CFormInput,
-  CFormSelect,
   CRow,
-  CFormTextarea,
-  CInputGroupText,
-  CInputGroup,
   CToaster,
   CSpinner,
   CTable,
@@ -26,7 +20,7 @@ import {
   CModalFooter,
 } from '@coreui/react'
 import { useNavigate } from 'react-router-dom'
-import { addMenu, deleteMenuById, deleteMneuById, getMenuAll } from 'src/utils/api'
+import { deleteMenuById, getMenuAll } from 'src/utils/api'
 import Toast from 'src/components/Toast'
 
 const DataMenu = () => {
