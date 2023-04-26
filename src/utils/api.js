@@ -282,6 +282,11 @@ async function laporanPendapatanByDate(data) {
   return await response.json()
 }
 
+async function getChatBalas() {
+  const response = await fetchWithToken(`${BASE_URL}/chat/getChatBalas`)
+  return await response.json()
+}
+
 export {
   getAccessToken,
   putAccessToken,
@@ -316,4 +321,5 @@ export {
   getPemesananProses,
   getPemesananSelesai,
   laporanPendapatanByDate,
+  getChatBalas,
 }
