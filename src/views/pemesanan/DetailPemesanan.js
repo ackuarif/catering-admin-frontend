@@ -208,7 +208,7 @@ const DataVerifikasi = () => {
             <CModalTitle>Pembayaran</CModalTitle>
           </CModalHeader>
           <CModalBody style={{ textAlign: 'center' }}>
-            <img src={pemesanan.data[0].bukti_bayar} width={450} />
+            <img src={pemesanan.data[0].bukti_bayar} width="100%" />
           </CModalBody>
           <CModalFooter>
             <CButton color="secondary" onClick={() => setPembayaranModal(false)}>

@@ -15,6 +15,8 @@ const DataProsesPemesanan = React.lazy(() => import('./views/pemesanan/DataProse
 const DataSelesaiPemesanan = React.lazy(() => import('./views/pemesanan/DataSelesai'))
 const DetailPemesanan = React.lazy(() => import('./views/pemesanan/DetailPemesanan'))
 
+const Pendapatan = React.lazy(() => import('./views/laporan/Pendapatan'))
+
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
@@ -28,6 +30,7 @@ const routes = [
   { path: '/pemesanan/proses', name: 'Data Proses', element: DataProsesPemesanan },
   { path: '/pemesanan/selesai', name: 'Data Selesai', element: DataSelesaiPemesanan },
   { path: '/pemesanan/detail/:id', name: 'Detail Pemesanan', element: DetailPemesanan },
+  { path: '/tools/laporan', name: 'Laporan', element: Pendapatan },
 ]
 
 export default routes

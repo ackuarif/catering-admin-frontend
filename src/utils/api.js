@@ -1,6 +1,6 @@
-// const BASE_URL = 'http://localhost:8000/api'
+const BASE_URL = 'http://localhost:8000/api'
 // const BASE_URL = 'http://192.168.1.4:8000/api';
-const BASE_URL = 'https://api.tomboluwe.my.id/api'
+// const BASE_URL = 'https://api.tomboluwe.my.id/api'
 
 function getAccessToken() {
   return localStorage.getItem('accessToken')
@@ -271,6 +271,17 @@ async function getPemesananHeaderById(id) {
   return await response.json()
 }
 
+async function laporanPendapatanByDate(data) {
+  const response = await fetchWithToken(`${BASE_URL}/pemesanan/laporanPendapatanByDate`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+  return await response.json()
+}
+
 export {
   getAccessToken,
   putAccessToken,
@@ -304,4 +315,5 @@ export {
   getPemesananHeaderById,
   getPemesananProses,
   getPemesananSelesai,
+  laporanPendapatanByDate,
 }
