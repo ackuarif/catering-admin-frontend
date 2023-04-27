@@ -71,7 +71,7 @@ const DataChat = () => {
                   <CTableDataCell>
                     <CButton
                       onClick={() => {
-                        navigate(`/chat/${pemesanan_id}`)
+                        navigate(`/tools/chatting/${pemesanan_id}`)
                       }}
                       className="mb-1 ms-1"
                       color="primary"

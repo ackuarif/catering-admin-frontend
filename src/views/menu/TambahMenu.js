@@ -72,7 +72,6 @@ const TambahMenu = () => {
             <CForm className="row g-3" onSubmit={handleSubmit}>
               <CInputGroup>
                 <CFormInput
-                  size="2"
                   type="text"
                   required
                   placeholder="Nama Menu"

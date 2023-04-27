@@ -17,6 +17,7 @@ const DetailPemesanan = React.lazy(() => import('./views/pemesanan/DetailPemesan
 
 const Pendapatan = React.lazy(() => import('./views/laporan/Pendapatan'))
 const Chatting = React.lazy(() => import('./views/chat/DataChat'))
+const ChatByPemesananId = React.lazy(() => import('./views/chat/ChatByPemesananId'))
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
@@ -33,6 +34,7 @@ const routes = [
   { path: '/pemesanan/detail/:id', name: 'Detail Pemesanan', element: DetailPemesanan },
   { path: '/tools/laporan', name: 'Laporan', element: Pendapatan },
   { path: '/tools/chatting', name: 'Chatting', element: Chatting },
+  { path: '/tools/chatting/:id', name: 'Chat By Pemesanan', element: ChatByPemesananId },
 ]
 
 export default routes

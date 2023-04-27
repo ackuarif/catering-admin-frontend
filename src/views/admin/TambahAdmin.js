@@ -65,7 +65,6 @@ const TambahAdmin = () => {
             <CForm className="row g-3" onSubmit={handleSubmit}>
               <CInputGroup>
                 <CFormInput
-                  size="2"
                   type="text"
                   required
                   placeholder="Nama"
@@ -76,7 +75,6 @@ const TambahAdmin = () => {
               </CInputGroup>
               <CInputGroup>
                 <CFormInput
-                  size="2"
                   type="text"
                   required
                   placeholder="User ID"
@@ -87,7 +85,6 @@ const TambahAdmin = () => {
               </CInputGroup>
               <CInputGroup>
                 <CFormInput
-                  size="2"
                   type="password"
                   required
                   placeholder="Password"
@@ -98,7 +95,6 @@ const TambahAdmin = () => {
               </CInputGroup>
               <CInputGroup>
                 <CFormInput
-                  size="2"
                   type="password"
                   required
                   placeholder="Konfirmasi Password"

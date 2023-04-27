@@ -55,8 +55,8 @@ async function getSelfUser() {
   return await response.json()
 }
 
-async function addChatPelanggan(data) {
-  const response = await fetchWithToken(`${BASE_URL}/chat/addChatPelanggan`, {
+async function addChatAdmin(data) {
+  const response = await fetchWithToken(`${BASE_URL}/chat/addChatAdmin`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -302,7 +302,7 @@ export {
   getKeranjangByPemesananId,
   getTotalKeranjangByPelanggan,
   getTotalByPemesananId,
-  addChatPelanggan,
+  addChatAdmin,
   getChatByPemesananId,
   login,
   register,

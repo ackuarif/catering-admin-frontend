@@ -183,7 +183,7 @@ const DataVerifikasi = () => {
         </CButton>
         <CButton
           onClick={() => {
-            navigate(`/pemesanan/detail/${id}`)
+            navigate(`/tools/chatting/${id}`)
           }}
           color="warning"
           className="mb-1 ms-1"

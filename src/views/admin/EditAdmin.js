@@ -87,7 +87,6 @@ const EditAdmin = () => {
             <CForm className="row g-3" onSubmit={handleSubmit}>
               <CInputGroup>
                 <CFormInput
-                  size="2"
                   type="text"
                   required
                   placeholder="Nama"
@@ -99,7 +98,6 @@ const EditAdmin = () => {
               </CInputGroup>
               <CInputGroup>
                 <CFormInput
-                  size="2"
                   type="text"
                   required
                   placeholder="User ID"

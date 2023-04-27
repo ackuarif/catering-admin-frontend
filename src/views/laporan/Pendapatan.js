@@ -103,7 +103,6 @@ const Pendapatan = () => {
             <CForm className="row g-3" onSubmit={handleSubmit}>
               <CInputGroup>
                 <CFormInput
-                  size="2"
                   type="date"
                   required
                   placeholder="Tanggal Dari"
@@ -114,7 +113,6 @@ const Pendapatan = () => {
               </CInputGroup>
               <CInputGroup>
                 <CFormInput
-                  size="2"
                   type="date"
                   required
                   placeholder="Tgl Sampai"
