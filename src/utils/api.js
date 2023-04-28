@@ -287,6 +287,16 @@ async function getChatBalas() {
   return await response.json()
 }
 
+async function getJmlPemesananPerMonth() {
+  const response = await fetchWithToken(`${BASE_URL}/pemesanan/getJmlPemesananPerMonth`)
+  return await response.json()
+}
+
+async function getJmlKunjunganPerMonth() {
+  const response = await fetchWithToken(`${BASE_URL}/log/getJmlKunjunganPerMonth`)
+  return await response.json()
+}
+
 export {
   getAccessToken,
   putAccessToken,
@@ -322,4 +332,6 @@ export {
   getPemesananSelesai,
   laporanPendapatanByDate,
   getChatBalas,
+  getJmlPemesananPerMonth,
+  getJmlKunjunganPerMonth,
 }
