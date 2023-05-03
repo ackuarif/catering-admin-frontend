@@ -45,7 +45,7 @@ const Dashboard = () => {
                   <h4 id="traffic" className="card-title mb-0">
                     Pemesanan
                   </h4>
-                  <div className="small text-medium-emphasis">January - July 2021</div>
+                  <div className="small text-medium-emphasis">Jumlah pemesanan tiap bulan</div>
                 </CCol>
               </CRow>
               <CChartLine
@@ -109,7 +109,7 @@ const Dashboard = () => {
                   <h4 id="traffic" className="card-title mb-0">
                     Kunjungan
                   </h4>
-                  <div className="small text-medium-emphasis">January - July 2021</div>
+                  <div className="small text-medium-emphasis">Jumlah kunjungan tiap bulan</div>
                 </CCol>
               </CRow>
               <CChartLine

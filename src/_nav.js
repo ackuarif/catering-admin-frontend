@@ -1,27 +1,15 @@
 import React from 'react'
 import CIcon from '@coreui/icons-react'
 import {
-  cilBell,
-  cilBrowser,
-  cilCalculator,
-  cilChartPie,
   cilChatBubble,
-  cilCursor,
   cilDescription,
-  cilDrop,
-  cilNoteAdd,
-  cilNotes,
-  cilPen,
-  cilPenAlt,
   cilPencil,
-  cilPuzzle,
-  cilReportSlash,
   cilSave,
+  cilSettings,
   cilSpeedometer,
-  cilStar,
   cilStorage,
 } from '@coreui/icons'
-import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
+import { CNavItem, CNavTitle } from '@coreui/react'
 
 const _nav = [
   {
@@ -99,6 +87,16 @@ const _nav = [
     name: 'Data Admin',
     to: '/admin/data',
     icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavTitle,
+    name: 'Setting',
+  },
+  {
+    component: CNavItem,
+    name: 'Setting',
+    to: '/tools/setting',
+    icon: <CIcon icon={cilSettings} customClassName="nav-icon" />,
   },
 ]
 

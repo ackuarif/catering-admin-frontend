@@ -297,6 +297,23 @@ async function getJmlKunjunganPerMonth() {
   return await response.json()
 }
 
+async function getSettingAll() {
+  const response = await fetchWithToken(`${BASE_URL}/setting`)
+  return await response.json()
+}
+
+async function updateSetting(data) {
+  const response = await fetchWithToken(`${BASE_URL}/setting`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+
+  return await response.json()
+}
+
 export {
   getAccessToken,
   putAccessToken,
@@ -334,4 +351,6 @@ export {
   getChatBalas,
   getJmlPemesananPerMonth,
   getJmlKunjunganPerMonth,
+  getSettingAll,
+  updateSetting,
 }
