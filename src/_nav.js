@@ -52,6 +52,12 @@ const _nav = [
   },
   {
     component: CNavItem,
+    name: 'Komplain',
+    to: '/tools/komplain',
+    icon: <CIcon icon={cilChatBubble} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
     name: 'Laporan',
     to: '/tools/laporan',
     icon: <CIcon icon={cilStorage} customClassName="nav-icon" />,

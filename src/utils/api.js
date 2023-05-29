@@ -1,6 +1,6 @@
-// const BASE_URL = 'http://localhost:8000/api'
+const BASE_URL = 'http://localhost:8000/api'
 // const BASE_URL = 'http://192.168.1.4:8000/api';
-const BASE_URL = 'https://api.tomboluwe.my.id/api'
+// const BASE_URL = 'https://api.tomboluwe.my.id/api'
 
 function getAccessToken() {
   return localStorage.getItem('accessToken')
@@ -314,6 +314,28 @@ async function updateSetting(data) {
   return await response.json()
 }
 
+async function addKomplainAdmin(data) {
+  const response = await fetchWithToken(`${BASE_URL}/komplain/addKomplainAdmin`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+
+  return await response.json()
+}
+
+async function getKomplainBalas() {
+  const response = await fetchWithToken(`${BASE_URL}/komplain/getKomplainBalas`)
+  return await response.json()
+}
+
+async function getKomplainByUserId(id) {
+  const response = await fetchWithToken(`${BASE_URL}/komplain/${id}`)
+  return await response.json()
+}
+
 export {
   getAccessToken,
   putAccessToken,
@@ -353,4 +375,7 @@ export {
   getJmlKunjunganPerMonth,
   getSettingAll,
   updateSetting,
+  addKomplainAdmin,
+  getKomplainBalas,
+  getKomplainByUserId,
 }

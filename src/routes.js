@@ -18,6 +18,8 @@ const DetailPemesanan = React.lazy(() => import('./views/pemesanan/DetailPemesan
 const Pendapatan = React.lazy(() => import('./views/laporan/Pendapatan'))
 const Chatting = React.lazy(() => import('./views/chat/DataChat'))
 const ChatByPemesananId = React.lazy(() => import('./views/chat/ChatByPemesananId'))
+const Komplain = React.lazy(() => import('./views/komplain/DataKomplain'))
+const KomplainByUserId = React.lazy(() => import('./views/komplain/KomplainByUserId'))
 const Setting = React.lazy(() => import('./views/setting/EditSetting'))
 
 const routes = [
@@ -37,6 +39,8 @@ const routes = [
   { path: '/tools/chatting', name: 'Chatting', element: Chatting },
   { path: '/tools/chatting/:id', name: 'Chat By Pemesanan', element: ChatByPemesananId },
   { path: '/tools/setting', name: 'Setting', element: Setting },
+  { path: '/tools/komplain', name: 'Komplain', element: Komplain },
+  { path: '/tools/komplain/:id', name: 'Komplain By Pelanggan', element: KomplainByUserId },
 ]
 
 export default routes
