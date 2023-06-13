@@ -20,48 +20,48 @@ import {
   CModalFooter,
 } from '@coreui/react'
 import { useNavigate } from 'react-router-dom'
-import { getAdminAll, inactiveAdminById } from 'src/utils/api'
+import { getWilayahAll, inactiveWilayahById } from 'src/utils/api'
 import Toast from 'src/components/Toast'
 
-const DataAdmin = () => {
+const DataWilayah = () => {
   const navigate = useNavigate()
 
   const [isLoading, setIsLoading] = useState(false)
   const [toast, addToast] = useState(0)
 
-  const [admins, setAdmins] = useState({})
+  const [wilayahs, setWilayahs] = useState({})
 
   useEffect(() => {
     componentDidMount()
   }, [])
 
-  const getAdminAllReqFunc = async () => {
+  const getWilayahAllReqFunc = async () => {
     setIsLoading(true)
-    const getAdminAllReq = await getAdminAll()
+    const getWilayahAllReq = await getWilayahAll()
     setIsLoading(false)
-    setAdmins(getAdminAllReq)
+    setWilayahs(getWilayahAllReq)
   }
 
   const componentDidMount = async () => {
-    await getAdminAllReqFunc()
+    await getWilayahAllReqFunc()
   }
 
-  const inactiveAdminByIdFunc = async (id) => {
+  const inactiveWilayahByIdFunc = async (id) => {
     setIsLoading(true)
-    const inactiveAdminByIdReq = await inactiveAdminById(id)
+    const inactiveWilayahByIdReq = await inactiveWilayahById(id)
     setIsLoading(false)
 
-    if (!inactiveAdminByIdReq.success) {
-      addToast(<Toast color="danger" body={inactiveAdminByIdReq.message} />)
+    if (!inactiveWilayahByIdReq.success) {
+      addToast(<Toast color="danger" body={inactiveWilayahByIdReq.message} />)
       return
     }
 
-    await getAdminAllReqFunc()
+    await getWilayahAllReqFunc()
   }
 
-  const AdminTable = () => {
+  const WilayahTable = () => {
     const [visible, setVisible] = useState(false)
-    const [adminId, setAdminId] = useState('')
+    const [wilayahId, setWilayahId] = useState('')
 
     return (
       <div className="table-responsive">
@@ -70,22 +70,22 @@ const DataAdmin = () => {
             <CTableRow>
               <CTableHeaderCell scope="col">No.</CTableHeaderCell>
               <CTableHeaderCell scope="col">Nama</CTableHeaderCell>
-              <CTableHeaderCell scope="col">User ID</CTableHeaderCell>
+              <CTableHeaderCell scope="col">Biaya Pengiriman</CTableHeaderCell>
               <CTableHeaderCell scope="col">Aksi</CTableHeaderCell>
             </CTableRow>
           </CTableHead>
           <CTableBody>
-            {admins.data.map((admin, i) => {
-              const { id, nama, user_id } = admin
+            {wilayahs.data.map((wilayah, i) => {
+              const { id, nama, ongkir } = wilayah
               return (
                 <CTableRow key={id}>
                   <CTableHeaderCell scope="row">{i + 1}</CTableHeaderCell>
                   <CTableDataCell>{nama}</CTableDataCell>
-                  <CTableDataCell>{user_id}</CTableDataCell>
+                  <CTableDataCell>{ongkir}</CTableDataCell>
                   <CTableDataCell>
                     <CButton
                       onClick={() => {
-                        navigate(`/admin/edit/${id}`)
+                        navigate(`/wilayah/edit/${id}`)
                       }}
                       className="mb-1 ms-1"
                       color="primary"
@@ -98,11 +98,11 @@ const DataAdmin = () => {
                       color="danger"
                       onClick={() => {
                         setVisible(!visible)
-                        setAdminId(id)
+                        setWilayahId(id)
                       }}
                       size="sm"
                     >
-                      Inactive
+                      Hapus
                     </CButton>
                   </CTableDataCell>
                 </CTableRow>
@@ -114,12 +114,12 @@ const DataAdmin = () => {
           <CModalHeader>
             <CModalTitle>Hapus</CModalTitle>
           </CModalHeader>
-          <CModalBody>Apakah yakin akan inactive admin tersebut ?</CModalBody>
+          <CModalBody>Apakah yakin akan menghapus wilayah tersebut ?</CModalBody>
           <CModalFooter>
             <CButton color="secondary" onClick={() => setVisible(false)}>
               Batal
             </CButton>
-            <CButton color="danger" onClick={() => inactiveAdminByIdFunc(adminId)}>
+            <CButton color="danger" onClick={() => inactiveWilayahByIdFunc(wilayahId)}>
               Hapus
             </CButton>
           </CModalFooter>
@@ -136,13 +136,13 @@ const DataAdmin = () => {
         <CToaster push={toast} placement="top-end" />
         <CCard className="mb-4">
           <CCardHeader>
-            <strong>Data Admin</strong>
+            <strong>Data Wilayah</strong>
           </CCardHeader>
-          <CCardBody>{admins.success ? <AdminTable /> : admins.message}</CCardBody>
+          <CCardBody>{wilayahs.success ? <WilayahTable /> : wilayahs.message}</CCardBody>
         </CCard>
       </div>
     </CRow>
   )
 }
 
-export default DataAdmin
+export default DataWilayah

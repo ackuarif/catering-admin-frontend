@@ -279,6 +279,12 @@ const DataVerifikasi = () => {
               )
             })}
             <CTableRow>
+              <CTableDataCell colspan={6} style={{ textAlign: 'right' }}>
+                Biaya Pengiriman
+              </CTableDataCell>
+              <CTableDataCell>Rp.{pemesanan.data[0].ongkir}</CTableDataCell>
+            </CTableRow>
+            <CTableRow>
               <CTableDataCell colspan={6} style={{ textAlign: 'right', fontWeight: 'bold' }}>
                 Total
               </CTableDataCell>

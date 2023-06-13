@@ -336,6 +336,54 @@ async function getKomplainByUserId(id) {
   return await response.json()
 }
 
+async function addWilayah(data) {
+  const response = await fetchWithToken(`${BASE_URL}/wilayah`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+
+  return await response.json()
+}
+
+async function getWilayahAll() {
+  const response = await fetchWithToken(`${BASE_URL}/wilayah`)
+  return await response.json()
+}
+
+async function inactiveWilayahById(id) {
+  const response = await fetchWithToken(`${BASE_URL}/wilayah/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+
+  return await response.json()
+}
+
+async function updateWilayah(data) {
+  const { id } = data
+
+  const response = await fetchWithToken(`${BASE_URL}/wilayah/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+
+  return await response.json()
+}
+
+async function getWilayahById(id) {
+  const response = await fetchWithToken(`${BASE_URL}/wilayah/getWilayahById/${id}`)
+  const data = await response.json()
+  return data
+}
+
 export {
   getAccessToken,
   putAccessToken,
@@ -378,4 +426,9 @@ export {
   addKomplainAdmin,
   getKomplainBalas,
   getKomplainByUserId,
+  addWilayah,
+  getWilayahAll,
+  inactiveWilayahById,
+  updateWilayah,
+  getWilayahById,
 }

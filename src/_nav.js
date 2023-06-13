@@ -96,6 +96,22 @@ const _nav = [
   },
   {
     component: CNavTitle,
+    name: 'Wilayah',
+  },
+  {
+    component: CNavItem,
+    name: 'Tambah Wilayah',
+    to: '/wilayah/tambah',
+    icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Data Wilayah',
+    to: '/wilayah/data',
+    icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavTitle,
     name: 'Setting',
   },
   {
