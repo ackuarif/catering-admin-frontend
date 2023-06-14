@@ -14,6 +14,7 @@ const TambahWilayah = React.lazy(() => import('./views/wilayah/TambahWilayah'))
 const DataWilayah = React.lazy(() => import('./views/wilayah/DataWilayah'))
 const EditWilayah = React.lazy(() => import('./views/wilayah/EditWilayah'))
 
+const DataUnpaidPemesanan = React.lazy(() => import('./views/pemesanan/DataUnpaid'))
 const DataVerifikasiPemesanan = React.lazy(() => import('./views/pemesanan/DataVerifikasi'))
 const DataProsesPemesanan = React.lazy(() => import('./views/pemesanan/DataProses'))
 const DataSelesaiPemesanan = React.lazy(() => import('./views/pemesanan/DataSelesai'))
@@ -38,6 +39,7 @@ const routes = [
   { path: '/wilayah/tambah', name: 'Tambah Wilayah', element: TambahWilayah },
   { path: '/wilayah/data', name: 'Data Wilayah', element: DataWilayah },
   { path: '/wilayah/edit/:id', name: 'Edit Wilayah', element: EditWilayah },
+  { path: '/pemesanan/unpaid', name: 'Data Unpaid', element: DataUnpaidPemesanan },
   { path: '/pemesanan/verifikasi', name: 'Data Verifikasi', element: DataVerifikasiPemesanan },
   { path: '/pemesanan/proses', name: 'Data Proses', element: DataProsesPemesanan },
   { path: '/pemesanan/selesai', name: 'Data Selesai', element: DataSelesaiPemesanan },

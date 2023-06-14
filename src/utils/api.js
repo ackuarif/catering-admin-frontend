@@ -229,6 +229,11 @@ async function getAdminById(id) {
   return data
 }
 
+async function getPemesananUnpaid() {
+  const response = await fetchWithToken(`${BASE_URL}/pemesanan/getPemesananUnpaid`)
+  return await response.json()
+}
+
 async function getPemesananVerif() {
   const response = await fetchWithToken(`${BASE_URL}/pemesanan/getPemesananVerif`)
   return await response.json()
@@ -412,6 +417,7 @@ export {
   updateAdmin,
   getAdminById,
   getPemesananVerif,
+  getPemesananUnpaid,
   verifPemesanan,
   selesaiPemesanan,
   getPemesananHeaderById,

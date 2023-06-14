@@ -109,6 +109,7 @@ const DataVerifikasi = () => {
                 tgl_selesai,
                 tgl_bayar,
                 nama,
+                wilayah_nama,
                 alamat,
                 telepon,
               } = data
@@ -129,6 +130,10 @@ const DataVerifikasi = () => {
                   <CTableRow key={id}>
                     <CTableDataCell style={{ fontWeight: 'bold' }}>Alamat</CTableDataCell>
                     <CTableDataCell>{alamat}</CTableDataCell>
+                  </CTableRow>
+                  <CTableRow key={id}>
+                    <CTableDataCell style={{ fontWeight: 'bold' }}>Wilayah</CTableDataCell>
+                    <CTableDataCell>{wilayah_nama}</CTableDataCell>
                   </CTableRow>
                   <CTableRow key={id}>
                     <CTableDataCell style={{ fontWeight: 'bold' }}>Telepon</CTableDataCell>
