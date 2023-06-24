@@ -5,6 +5,7 @@ const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
 const TambahMenu = React.lazy(() => import('./views/menu/TambahMenu'))
 const DataMenu = React.lazy(() => import('./views/menu/DataMenu'))
 const EditMenu = React.lazy(() => import('./views/menu/EditMenu'))
+const DetailMenu = React.lazy(() => import('./views/menu/DetailMenu'))
 
 const TambahAdmin = React.lazy(() => import('./views/admin/TambahAdmin'))
 const DataAdmin = React.lazy(() => import('./views/admin/DataAdmin'))
@@ -33,6 +34,7 @@ const routes = [
   { path: '/menu/tambah', name: 'Tambah Menu', element: TambahMenu },
   { path: '/menu/data', name: 'Data Menu', element: DataMenu },
   { path: '/menu/edit/:id', name: 'Edit Menu', element: EditMenu },
+  { path: '/menu/detail/:id', name: 'Edit Menu', element: DetailMenu },
   { path: '/admin/tambah', name: 'Tambah Admin', element: TambahAdmin },
   { path: '/admin/data', name: 'Data Admin', element: DataAdmin },
   { path: '/admin/edit/:id', name: 'Edit Admin', element: EditAdmin },

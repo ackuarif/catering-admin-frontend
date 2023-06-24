@@ -105,6 +105,7 @@ const DataVerifikasi = () => {
                 id,
                 no_pesan,
                 tgl_pesan,
+                sistem_bayar,
                 tgl_verif,
                 tgl_selesai,
                 tgl_bayar,
@@ -122,6 +123,10 @@ const DataVerifikasi = () => {
                   <CTableRow key={id}>
                     <CTableDataCell style={{ fontWeight: 'bold' }}>Tgl Pemesanan</CTableDataCell>
                     <CTableDataCell>{tgl_pesan}</CTableDataCell>
+                  </CTableRow>
+                  <CTableRow key={id}>
+                    <CTableDataCell style={{ fontWeight: 'bold' }}>Sistem Bayar</CTableDataCell>
+                    <CTableDataCell>{sistem_bayar}</CTableDataCell>
                   </CTableRow>
                   <CTableRow key={id}>
                     <CTableDataCell style={{ fontWeight: 'bold' }}>Nama Pelanggan</CTableDataCell>
@@ -206,7 +211,11 @@ const DataVerifikasi = () => {
             <CModalTitle>Pembayaran</CModalTitle>
           </CModalHeader>
           <CModalBody style={{ textAlign: 'center' }}>
-            <img src={pemesanan.data[0].bukti_bayar} width="100%" />
+            {pemesanan.data[0].sistem_bayar == 'Tunai' ? (
+              <h4>Pembayaran dengan sistem bayar Tunai</h4>
+            ) : (
+              <img src={pemesanan.data[0].bukti_bayar} width="100%" />
+            )}
           </CModalBody>
           <CModalFooter>
             <CButton color="secondary" onClick={() => setPembayaranModal(false)}>

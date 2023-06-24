@@ -102,6 +102,16 @@ const DataMenu = () => {
                       Edit
                     </CButton>
                     <CButton
+                      onClick={() => {
+                        navigate(`/menu/detail/${id}`)
+                      }}
+                      className="mb-1 ms-1"
+                      color="success"
+                      size="sm"
+                    >
+                      Detail
+                    </CButton>
+                    <CButton
                       className="mb-1 ms-1"
                       color="danger"
                       onClick={() => {

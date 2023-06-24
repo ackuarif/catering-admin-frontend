@@ -389,6 +389,64 @@ async function getWilayahById(id) {
   return data
 }
 
+async function addMenuIsi(data) {
+  const response = await fetchWithToken(`${BASE_URL}/menu/addMenuIsi`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+
+  return await response.json()
+}
+
+async function getMenuIsiByMenuid(menu_id) {
+  const response = await fetchWithToken(`${BASE_URL}/menu/getMenuIsiByMenuId/${menu_id}`)
+  return await response.json()
+}
+
+async function deleteMenuIsi(id) {
+  const response = await fetchWithToken(`${BASE_URL}/menu/deleteMenuIsi/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+
+  return await response.json()
+}
+
+async function addMenuGambar(data) {
+  const formData = new FormData()
+  const { menu_id, gambar } = data
+  formData.append('menu_id', menu_id)
+  formData.append('gambar', gambar)
+
+  const response = await fetchWithToken(`${BASE_URL}/menu/addMenuGambar`, {
+    method: 'POST',
+    body: formData,
+  })
+
+  return await response.json()
+}
+
+async function getMenuGambarByMenuId(menu_id) {
+  const response = await fetchWithToken(`${BASE_URL}/menu/getMenuGambarByMenuId/${menu_id}`)
+  return await response.json()
+}
+
+async function deleteMenuGambar(id) {
+  const response = await fetchWithToken(`${BASE_URL}/menu/deleteMenuGambar/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+
+  return await response.json()
+}
+
 export {
   getAccessToken,
   putAccessToken,
@@ -437,4 +495,10 @@ export {
   inactiveWilayahById,
   updateWilayah,
   getWilayahById,
+  addMenuIsi,
+  getMenuIsiByMenuid,
+  deleteMenuIsi,
+  addMenuGambar,
+  getMenuGambarByMenuId,
+  deleteMenuGambar,
 }
