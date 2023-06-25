@@ -26,10 +26,10 @@ const WidgetsBrand = ({ withCharts }) => {
 
   const componentDidMount = async () => {
     const getJmlPemesananCurrentMonthReq = await getJmlPemesananCurrentMonth()
-    setJmlPemesananPrevMonth(getJmlPemesananCurrentMonthReq.data)
+    setJmlPemesananCurrentMonth(getJmlPemesananCurrentMonthReq.data)
 
     const getJmlPemesananPrevMonthReq = await getJmlPemesananPrevMonth()
-    setJmlPemesananCurrentMonth(getJmlPemesananPrevMonthReq.data)
+    setJmlPemesananPrevMonth(getJmlPemesananPrevMonthReq.data)
 
     const getPemesananVerifReq = await getPemesananVerif()
     if (getPemesananVerifReq.success) setJmlVerif(getPemesananVerifReq.data.length)
